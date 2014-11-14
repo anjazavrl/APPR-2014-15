@@ -4,7 +4,7 @@ Repozitorij z gradivi pri predmetu APPR v študijskem letu 2014/15.
 
 ## Tematika
 
-Izbrala sem si temo o svetovnih prvakih Formule 1 po letih. Analizirala bom število zmag posameznih ekip in na zemljevidu prikazala iz katerih držav prihajajo dirkači.
+Izbrala sem si temo o svetovnih prvakih Formule 1 po letih. Analizirala bom število zmag posameznih ekip, na zemljevidu prikazala iz katerih držav prihajajo dirkači in moštva in iz katere države prihaja največ dirkačev. 
 
 Podatki: http://en.wikipedia.org/wiki/List_of_Formula_One_World_Drivers%27_Champions
 
