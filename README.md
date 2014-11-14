@@ -4,8 +4,9 @@ Repozitorij z gradivi pri predmetu APPR v študijskem letu 2014/15.
 
 ## Tematika
 
-Izbrali si boste temo, s katero se bo vaš projekt ukvarjal. Tukaj boste
-napisali, kje ste dobili podatke, ter kakšen je vaš cilj.
+Izbrala sem si temo o svetovnih prvakih Formule 1 po letih. Analizirala bom število zmag posameznih ekip in na zemljevidu prikazala iz katerih držav prihajajo dirkači.
+
+Podatki: http://en.wikipedia.org/wiki/List_of_Formula_One_World_Drivers%27_Champions
 
 ## Program
 
