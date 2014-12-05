@@ -12,19 +12,35 @@ cat("Uvažam podatke o sezoni 2014...\n")
 sezona2014 <- uvoziSezona2014()
 
 
-
-
 # Funkcija, ki uvozi podatke iz datoteke svetovniprvaki.csv
 uvoziSvetovniprvaki <- function() {
   return(read.table("podatki/svetovniprvaki.csv", sep = ";", as.is = TRUE,
                     header = TRUE,
                     fileEncoding = "Windows-1250"))
+
 }
 
 
 # Zapišimo podatke v razpredelnico svetovni prvaki.
 cat("Uvažam podatke o svetovnih prvakih...\n")
 svetovniprvaki <- uvoziSvetovniprvaki()
+
+# Urejenostna spremenljivka
+cat("Uvažam urejenostno spremenljivko... \n")
+stevilo.zmag <- c("veliko zmag", "nekaj zmag", "ena zmaga")
+zmage.ekip <- character(length(svetovniprvaki$Team))
+zmage.ekip[summary(svetovniprvaki$Team) > 3] <- "veliko zmag"
+zmage.ekip[summary(svetovniprvaki$Team) > 1 & summary(svetovniprvaki$Team) < 4] <- "nekaj zmag"
+zmage.ekip[summary(svetovniprvaki$Team) < 2] <- "ena zmaga"
+Zmage.ekip <- factor(svetovniprvaki$Team, levels = stevilo.zmag, ordered = TRUE)
+Zmage.Ekip <- data.frame(svetovniprvaki$Season, svetovniprvaki$Driver, svetovniprvaki$Country,
+                         svetovniprvaki$Team,svetovniprvaki$Base, svetovniprvaki$Engine, zmage.ekip)
+
+
+
+# source("lib/xml.r", encoding="UTF-8")
+# cat("Uvažam podatke o konstruktorskih zmagah.\n")
+# konstruktorske.zmage <- uvoz.konstruktorske.zmage()
 
 
 # Če bi imeli več funkcij za uvoz in nekaterih npr. še ne bi
