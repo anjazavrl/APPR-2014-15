@@ -29,7 +29,6 @@ uvoz.konstruktorske.zmage <- function() {
   colnames(matrika) <- gsub("\n", " ", stripByPath(vrstice[[1]], ".//th"))
   
   # Podatke iz matrike spravimo v razpredelnico
-  return(data.frame(Country = gsub("^.(.*)$", "\\1", matrika[,2]),
+  return(data.frame(Country = gsub("[^a-z ]", "", matrika[,2], ignore.case=TRUE),
                     Total = as.numeric(matrika[,3]), row.names = matrika[,1]))
-  
 }
