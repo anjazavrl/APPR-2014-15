@@ -25,17 +25,17 @@ uvoziSvetovniprvaki <- function() {
 cat("Uvažam podatke o svetovnih prvakih...\n")
 svetovniprvaki <- uvoziSvetovniprvaki()
 
+
 # Urejenostna spremenljivka
 cat("Uvažam urejenostno spremenljivko... \n")
-stevilo.zmag <- c("veliko zmag", "nekaj zmag", "ena zmaga")
-zmage.ekip <- character(length(svetovniprvaki$Team))
-zmage.ekip[summary(svetovniprvaki$Team) > 3] <- "veliko zmag"
-zmage.ekip[summary(svetovniprvaki$Team) > 1 & summary(svetovniprvaki$Team) < 4] <- "nekaj zmag"
-zmage.ekip[summary(svetovniprvaki$Team) < 2] <- "ena zmaga"
-Zmage.ekip <- factor(svetovniprvaki$Team, levels = stevilo.zmag, ordered = TRUE)
-Zmage.Ekip <- data.frame(svetovniprvaki$Season, svetovniprvaki$Driver, svetovniprvaki$Country,
-                         svetovniprvaki$Team,svetovniprvaki$Base, svetovniprvaki$Engine, zmage.ekip)
-
+kategorije <- c("Večkrat prvak", "Dva naslova prvaka", "En naslov prvaka")
+stevilo.naslovov.dirkaca <- character(length(svetovniprvaki$Driver))
+stevilo.naslovov.dirkaca[summary(svetovniprvaki$Driver) > 2] <- "Večkrat prvak"
+stevilo.naslovov.dirkaca[summary(svetovniprvaki$Driver) == 2] <- "Dvakrat prvak"
+stevilo.naslovov.dirkaca[summary(svetovniprvaki$Driver) < 2] <- "Enkrat prvak"
+Stevilo.Naslovov.Dirkaca <- factor(stevilo.naslovov.dirkaca, levels = kategorije, ordered = TRUE)
+Stevilo.naslovov.dirkaca <- data.frame(Sezona = svetovniprvaki$Season, Dirkač = svetovniprvaki$Driver, Država = svetovniprvaki$Country,
+                                       Ekipa = svetovniprvaki$Team, Stevilo.Naslovov.Dirkaca)
 
 
 source("lib/xml.r", encoding="UTF-8")
