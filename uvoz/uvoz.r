@@ -38,9 +38,9 @@ Zmage.Ekip <- data.frame(svetovniprvaki$Season, svetovniprvaki$Driver, svetovnip
 
 
 
-# source("lib/xml.r", encoding="UTF-8")
-# cat("Uvažam podatke o konstruktorskih zmagah.\n")
-# konstruktorske.zmage <- uvoz.konstruktorske.zmage()
+source("lib/xml.r", encoding="UTF-8")
+cat("Uvažam podatke o konstruktorskih zmagah.\n")
+konstruktorske.zmage <- uvoz.konstruktorske.zmage()
 
 
 # Če bi imeli več funkcij za uvoz in nekaterih npr. še ne bi
