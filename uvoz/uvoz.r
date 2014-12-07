@@ -28,14 +28,19 @@ svetovniprvaki <- uvoziSvetovniprvaki()
 
 # Urejenostna spremenljivka
 cat("Uvažam urejenostno spremenljivko... \n")
-kategorije <- c("Večkrat prvak", "Dva naslova prvaka", "En naslov prvaka")
+kategorije <- c("Enkrat prvak", "Dvakrat prvak", "Večkrat prvak")
 stevilo.naslovov.dirkaca <- character(length(svetovniprvaki$Driver))
-stevilo.naslovov.dirkaca[summary(svetovniprvaki$Driver) > 2] <- "Večkrat prvak"
-stevilo.naslovov.dirkaca[summary(svetovniprvaki$Driver) == 2] <- "Dvakrat prvak"
-stevilo.naslovov.dirkaca[summary(svetovniprvaki$Driver) < 2] <- "Enkrat prvak"
+veckrat.prvak <- svetovniprvaki$Driver %in% names(which(table(svetovniprvaki$Driver) > 2))
+dvakrat.prvak <- svetovniprvaki$Driver %in% names(which(table(svetovniprvaki$Driver) == 2))
+enkrat.prvak <- svetovniprvaki$Driver %in% names(which(table(svetovniprvaki$Driver) < 2))
+stevilo.naslovov.dirkaca[veckrat.prvak] <- "Večkrat prvak"
+stevilo.naslovov.dirkaca[dvakrat.prvak] <- "Dvakrat prvak"
+stevilo.naslovov.dirkaca[enkrat.prvak] <- "Enkrat prvak"
 Stevilo.Naslovov.Dirkaca <- factor(stevilo.naslovov.dirkaca, levels = kategorije, ordered = TRUE)
 Stevilo.naslovov.dirkaca <- data.frame(Sezona = svetovniprvaki$Season, Dirkač = svetovniprvaki$Driver, Država = svetovniprvaki$Country,
                                        Ekipa = svetovniprvaki$Team, Stevilo.Naslovov.Dirkaca)
+
+
 
 
 source("lib/xml.r", encoding="UTF-8")
