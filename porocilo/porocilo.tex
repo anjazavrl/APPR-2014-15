@@ -3,22 +3,45 @@
 \usepackage[slovene]{babel}
 \usepackage[utf8x]{inputenc}
 \usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{url}
 
 \pagestyle{plain}
 
 \begin{document}
 \title{Poročilo pri predmetu \\
 Analiza podatkov s programom R}
-\author{Študent FMF}
+\author{Anja Zavrl}
 \maketitle
 
 \section{Izbira teme}
 
 Izbrala sem si temo o svetovnih prvakih Formule 1 po letih. Analizirala bom število zmag posameznih ekip, na zemljevidu prikazala iz katerih držav prihajajo dirkači in moštva in iz katere države prihaja največ dirkačev. 
 
-Podatki: http://en.wikipedia.org/wiki/List_of_Formula_One_World_Drivers%27_Champions
+Podatki: 
+\begin{enumerate}
+\item \url{http://en.wikipedia.org/wiki/List_of_Formula_One_World_Drivers%27_Champions}
+\item \url{http://www.formula1.com/results/driver/2014/}
+\end{enumerate}
 
 \section{Obdelava, uvoz in čiščenje podatkov}
+
+V tem delu projekta sem obdelala in uvozila podatke o Formuli 1. Uvozila sem dve tabeli iz Excela; to sta tabeli
+svetovni prvaki Formule 1 in sezona 2014, in eno tabelo dirketno iz Wikipedije s pomočjo XML; to pa je tabela o konstruktorskih zmagah Formule 1. 
+
+Tabeli svetovni prvaki sem zbrisala nekaj nepomembnih stolpcev in dodala urejenostno spremenljivko, ki pove kolikokrat je bil kakšen dirkač svetovni prvak (enkrat, dvakrat ali večkrat) - to sem uvozila v tabelo Število naslovov dirkača.
+
+Narisala sem tudi dva grafa. Prvi pokaže število točk prvih 5 dirkačev v letošnji sezoni (2014), drugi pa delež konstruktorskih zmag prvih 10 ekip v Formuli 1.
+
+Graf št. 1:
+\includegraphics[width=\textwidth]{../slike/graf1.pdf}
+
+Graf št. 2:
+
+\includegraphics[width=\textwidth]{../slike/graf2.pdf}
+
+Da zaženemo projekt, moram zagnati funkcijo projekt.r.
+
 
 \section{Analiza in vizualizacija podatkov}
 
