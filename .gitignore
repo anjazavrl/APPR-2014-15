@@ -1,19 +1,19 @@
- *~
- __pycache__
- *.aux
- *.dbf
- *.log
- *.out
- *.pdf
- *.prj
- *.pyc
- *.shp
- *.shx
- *.synctex.gz
- *.synctex.gz(busy)
- *.zip
- .DS_Store
- .Rhistory
- .Rproj.user
- .RData
+*~
+__pycache__
+*.aux
+*.dbf
+*.log
+*.out
+*.pdf
+*.prj
+*.pyc
+*.shp
+*.shx
+*.synctex.gz
+*.synctex.gz(busy)
+*.zip
+.DS_Store
+.Rhistory
+.Rproj.user
+.RData
 .Rproj.user
