@@ -1,13 +1,18 @@
 *~
 __pycache__
 *.aux
+*.cpg
 *.dbf
+*.dbf.xml
 *.log
 *.out
 *.pdf
 *.prj
 *.pyc
+*.sbn
+*.sbx
 *.shp
+*.shp.xml
 *.shx
 *.synctex.gz
 *.synctex.gz(busy)
@@ -16,4 +21,7 @@ __pycache__
 .Rhistory
 .Rproj.user
 .RData
+<<<<<<< HEAD
 .Rproj.user
+=======
+>>>>>>> upstream/master
