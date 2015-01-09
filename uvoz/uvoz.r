@@ -42,21 +42,20 @@ Stevilo.naslovov.dirkaca <- data.frame(Sezona = svetovniprvaki$Season, Dirkač =
 
 
 
-
 source("lib/xml.r", encoding="UTF-8")
 cat("Uvažam podatke o konstruktorskih zmagah.\n")
 konstruktorske.zmage <- uvoz.konstruktorske.zmage()
 
-# Funkcija, ki uvozi podatke iz datoteke drzave.csv
-uvoziDrzave <- function() {
-  return(read.table("podatki/drzave.csv", sep = ";", as.is = TRUE,
+
+# Funkcija, ki uvozi podatke iz datoteke dirkalisca2014.csv
+uvoziDirkalisca <- function() {
+  return(read.table("podatki/dirkalisca2014.csv", sep = ";", as.is = TRUE,
                     header = TRUE,
                     fileEncoding = "Windows-1250"))
   
 }
 
-# Zapišimo podatke v razpredelnico države.
-cat("Uvažam podatke o državah...\n")
-drzave <- uvoziDrzave()
-
+# Zapišimo podatke v razpredelnico dirkališča.
+cat("Uvažam podatke o dirkališčih...\n")
+dirkalisca <- uvoziDirkalisca()
 
