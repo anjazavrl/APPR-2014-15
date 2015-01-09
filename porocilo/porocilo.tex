@@ -20,8 +20,10 @@ Izbrala sem si temo o svetovnih prvakih Formule 1 po letih. Analizirala bom šte
 
 Podatki: 
 \begin{enumerate}
-\item \url{http://en.wikipedia.org/wiki/List_of_Formula_One_World_Drivers%27_Champions}
+\item \url{http://en.wikipedia.org/wiki/List_of_Formula_One_World_Drivers%27_Champions#By_season}
 \item \url{http://www.formula1.com/results/driver/2014/}
+\item \url{http://en.wikipedia.org/wiki/List_of_Formula_One_World_Drivers%27_Champions#By_constructor}
+\item \url{http://en.wikipedia.org/wiki/List_of_Formula_One_circuits}
 \end{enumerate}
 
 \section{Obdelava, uvoz in čiščenje podatkov}
@@ -35,18 +37,18 @@ Narisala sem tudi dva grafa. Prvi pokaže število točk prvih 5 dirkačev v let
 
 Da zaženemo projekt, moramo zagnati funkcijo \verb|projekt.r|.
 
-\includegraphics[width=\textwidth]{../slike/graf1.pdf}
+\includegraphics[scale = 0.6]{../slike/graf1.pdf}
 
-\includegraphics[width=\textwidth]{../slike/graf2.pdf}
-
+\includegraphics[scale = 0.5]{../slike/graf2.pdf}
 
 \section{Analiza in vizualizacija podatkov}
 
-V 3. fazi projekta sem uvozila zemljevid sveta in pobarvala države iz katerih prihajajo vsi svetovni prvaki Formule 1. Države, ki imajo več zmag, so pobarvane bolj intenzivno kot tiste, ki imajo manj zmag. 
+V 3. fazi projekta sem uvozila zemljevid sveta, pobarvala države iz katerih prihajajo vsi svetovni prvaki Formule 1 in jih tudi poimenovala. Države, ki imajo več zmag, so pobarvane bolj intenzivno kot tiste, ki imajo manj zmag. 
 
-Uvozila sem novo tabelo države, v kateri so njihove koordinate, in jih na zemljevidu tudi poimenovala.
 
-\includegraphics[width=\textwidth]{../slike/Zmage_po_drzavah.pdf}
+\makebox[\textwidth][c]{
+\includegraphics[width=1.5\textwidth]{../slike/Zmage_po_drzavah.pdf}
+}
 
 \section{Napredna analiza podatkov}
 
