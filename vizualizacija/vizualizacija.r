@@ -17,17 +17,17 @@ najmanj.zmag <- min(t)
 
 # Narišimo zemljevid v PDF.
 cat("Rišem zemljevid...\n")
-pdf("slike/Zmage_po_drzavah.pdf", width=6, height=4)
+pdf("slike/Zmage_po_drzavah.pdf", width=10, height=8)
 
 n = max(t)
 u <- unique(t)
 u <- u[order(u)]
 barve <- rgb(0, 0, 1, match(t, u)/length(u))
 plot(svet, col = barve[as.character(svet$name_long)], border = "grey")
-title("Število naslovov po državah")
-legend("left", legend = u, fill = rgb(0, 0, 1, (1:length(u))/length(u)), bg="white" )
+title("Število svetovnih prvakov po državah")
+legend("left", legend = u, fill = rgb(0, 0, 1, (1:length(u))/length(u)), bg="white")
 
 #imena držav
-text(coordinates(drzave[c("dolzina", "sirina")]), labels = drzave$drzava, col = "black", cex = 0.3)
+text(coordinates(drzave[c("dolzina", "sirina")]), labels = drzave$drzava, col = "black", cex = 0.8)
 
 dev.off()
