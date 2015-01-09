@@ -47,9 +47,16 @@ source("lib/xml.r", encoding="UTF-8")
 cat("Uvažam podatke o konstruktorskih zmagah.\n")
 konstruktorske.zmage <- uvoz.konstruktorske.zmage()
 
+# Funkcija, ki uvozi podatke iz datoteke drzave.csv
+uvoziDrzave <- function() {
+  return(read.table("podatki/drzave.csv", sep = ";", as.is = TRUE,
+                    header = TRUE,
+                    fileEncoding = "Windows-1250"))
+  
+}
 
-# Če bi imeli več funkcij za uvoz in nekaterih npr. še ne bi
-# potrebovali v 3. fazi, bi bilo smiselno funkcije dati v svojo
-# datoteko, tukaj pa bi klicali tiste, ki jih potrebujemo v
-# 2. fazi. Seveda bi morali ustrezno datoteko uvoziti v prihodnjih
-# fazah.
+# Zapišimo podatke v razpredelnico države.
+cat("Uvažam podatke o državah...\n")
+drzave <- uvoziDrzave()
+
+
