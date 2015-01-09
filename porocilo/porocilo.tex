@@ -16,7 +16,7 @@ Analiza podatkov s programom R}
 
 \section{Izbira teme}
 
-Izbrala sem si temo o svetovnih prvakih Formule 1 po letih. Analizirala bom število zmag posameznih ekip, na zemljevidu prikazala iz katerih držav prihajajo dirkači in moštva in iz katere države prihaja največ dirkačev. 
+Izbrala sem si temo o svetovnih prvakih Formule 1 po letih. Analizirala bom število zmag posameznih ekip in število naslovov dirkačev, na zemljevidu prikazala iz katerih držav prihajajo dirkači in moštva.
 
 Podatki: 
 \begin{enumerate}
@@ -31,7 +31,7 @@ svetovni prvaki Formule 1 in sezona 2014, in eno tabelo dirketno iz Wikipedije s
 
 Tabeli svetovni prvaki sem zbrisala nekaj nepomembnih stolpcev in dodala urejenostno spremenljivko, ki pove kolikokrat je bil kakšen dirkač svetovni prvak (enkrat, dvakrat ali večkrat) - to sem uvozila v tabelo Število naslovov dirkača.
 
-Narisala sem tudi dva grafa. Prvi pokaže število točk prvih 5 dirkačev v letošnji sezoni (2014), drugi pa delež konstruktorskih zmag prvih 10 ekip v Formuli 1.
+Narisala sem tudi dva grafa. Prvi pokaže število točk prvih 5 dirkačev v letošnji sezoni (2014) in je stolpičaste oblike, drugi pa ima obliko pite in pokaže delež konstruktorskih zmag prvih 10 ekip v Formuli 1.
 
 Da zaženemo projekt, moramo zagnati funkcijo \verb|projekt.r|.
 
@@ -42,7 +42,11 @@ Da zaženemo projekt, moramo zagnati funkcijo \verb|projekt.r|.
 
 \section{Analiza in vizualizacija podatkov}
 
-%\includegraphics{../slike/povprecna_druzina.pdf}
+V 3. fazi projekta sem uvozila zemljevid sveta in pobarvala države iz katerih prihajajo vsi svetovni prvaki Formule 1. Države, ki imajo več zmag, so pobarvane bolj intenzivno kot tiste, ki imajo manj zmag. 
+
+Uvozila sem novo tabelo države, v kateri so njihove koordinate, in jih na zemljevidu tudi poimenovala.
+
+\includegraphics[width=\linewidth]{../slike/Zmage_po_drzavah.pdf}
 
 \section{Napredna analiza podatkov}
 
