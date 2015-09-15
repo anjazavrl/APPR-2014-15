@@ -43,19 +43,126 @@ Stevilo.naslovov.dirkaca <- data.frame(Sezona = svetovniprvaki$Season, Dirkač =
 
 
 source("lib/xml.r", encoding="UTF-8")
+library(XML)
 cat("Uvažam podatke o konstruktorskih zmagah.\n")
 konstruktorske.zmage <- uvoz.konstruktorske.zmage()
 
 
-# Funkcija, ki uvozi podatke iz datoteke dirkalisca2014.csv
-uvoziDirkalisca <- function() {
-  return(read.table("podatki/dirkalisca2014.csv", sep = ";", as.is = TRUE,
+
+
+
+# Funkcija, ki uvozi podatke iz datoteke konstruktorji2006.csv
+uvoziK2006 <- function() {
+  return(read.table("podatki/konstruktorji2006.csv", sep = ";", as.is = TRUE,
                     header = TRUE,
                     fileEncoding = "Windows-1250"))
   
 }
 
-# Zapišimo podatke v razpredelnico dirkališča.
-cat("Uvažam podatke o dirkališčih...\n")
-dirkalisca <- uvoziDirkalisca()
+# Zapišimo podatke v razpredelnico Konstruktorji2006
+cat("Uvažam podatke o konstruktorskih zmagah leta 2006...\n")
+Konstruktorji2006 <- uvoziK2006()
+
+
+
+# Funkcija, ki uvozi podatke iz datoteke konstruktorji2007.csv
+uvoziK2007 <- function() {
+  return(read.table("podatki/konstruktorji2007.csv", sep = ";", as.is = TRUE,
+                    header = TRUE,
+                    fileEncoding = "Windows-1250"))
+  
+}
+
+# Zapišimo podatke v razpredelnico Konstruktorji2007
+cat("Uvažam podatke o konstruktorskih zmagah leta 2007...\n")
+Konstruktorji2007 <- uvoziK2007()
+
+
+
+# Funkcija, ki uvozi podatke iz datoteke konstruktorji2008.csv
+uvoziK2008 <- function() {
+  return(read.table("podatki/konstruktorji2008.csv", sep = ";", as.is = TRUE,
+                    header = TRUE,
+                    fileEncoding = "Windows-1250"))
+  
+}
+
+# Zapišimo podatke v razpredelnico Konstruktorji2008
+cat("Uvažam podatke o konstruktorskih zmagah leta 2008...\n")
+Konstruktorji2008 <- uvoziK2008()
+
+
+
+
+
+
+# Funkcija, ki uvozi podatke iz datoteke konstruktorji2010.csv
+uvoziK2010 <- function() {
+  return(read.table("podatki/konstruktorji2010.csv", sep = ";", as.is = TRUE,
+                    header = TRUE,
+                    fileEncoding = "Windows-1250"))
+  
+}
+
+# Zapišimo podatke v razpredelnico Konstruktorji2010
+cat("Uvažam podatke o konstruktorskih zmagah leta 2010...\n")
+Konstruktorji2010 <- uvoziK2010()
+
+
+
+
+# Funkcija, ki uvozi podatke iz datoteke konstruktorji2011.csv
+uvoziK2011 <- function() {
+  return(read.table("podatki/konstruktorji2011.csv", sep = ";", as.is = TRUE,
+                    header = TRUE,
+                    fileEncoding = "Windows-1250"))
+  
+}
+
+# Zapišimo podatke v razpredelnico Konstruktorji2011
+cat("Uvažam podatke o konstruktorskih zmagah leta 2011...\n")
+Konstruktorji2011 <- uvoziK2011()
+
+
+# Funkcija, ki uvozi podatke iz datoteke konstruktorji2012.csv
+uvoziK2012 <- function() {
+  return(read.table("podatki/konstruktorji2012.csv", sep = ";", as.is = TRUE,
+                    header = TRUE,
+                    fileEncoding = "Windows-1250"))
+  
+}
+
+# Zapišimo podatke v razpredelnico Konstruktorji2012
+cat("Uvažam podatke o konstruktorskih zmagah leta 2012...\n")
+Konstruktorji2012 <- uvoziK2012()
+
+
+
+# Funkcija, ki uvozi podatke iz datoteke konstruktorji2013.csv
+uvoziK2013 <- function() {
+  return(read.table("podatki/konstruktorji2013.csv", sep = ";", as.is = TRUE,
+                    header = TRUE,
+                    fileEncoding = "Windows-1250"))
+  
+}
+
+# Zapišimo podatke v razpredelnico Konstruktorji2013
+cat("Uvažam podatke o konstruktorskih zmagah leta 2013...\n")
+Konstruktorji2013 <- uvoziK2013()
+
+
+
+# Funkcija, ki uvozi podatke iz datoteke konstruktorji2014.csv
+uvoziK2014 <- function() {
+  return(read.table("podatki/konstruktorji2014.csv", sep = ";", as.is = TRUE,
+                    header = TRUE,
+                    fileEncoding = "Windows-1250"))
+  
+}
+
+# Zapišimo podatke v razpredelnico Konstruktorji2014
+cat("Uvažam podatke o konstruktorskih zmagah leta 2014...\n")
+Konstruktorji2014 <- uvoziK2014()
+
+
 
