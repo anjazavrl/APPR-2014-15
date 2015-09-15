@@ -83,7 +83,6 @@ itajpn[is.na(itajpn)] <- 0
 
 breztock <- which(itajpn$ITA == 0 & itajpn$JPN == 0)
 itajpn <- itajpn[-breztock, ]
-#itajpn <- itajpn[-c(21, 31), ] # izbris neinformativnih primerov
 
 #********************
 
