@@ -5,6 +5,7 @@
 \usepackage{graphicx}
 \usepackage{enumerate}
 \usepackage{url}
+\usepackage{animate}
 
 \pagestyle{plain}
 
@@ -20,9 +21,9 @@ Izbrala sem si temo o svetovnih prvakih Formule 1 po letih. Analizirala bom šte
 
 Podatki: 
 \begin{enumerate}
-\item \url{http://en.wikipedia.org/wiki/List_of_Formula_One_World_Drivers%27_Champions#By_season}
+\item \url{https://en.wikipedia.org/wiki/List_of_Formula_One_World_Drivers%27_Champions#By_season}
 \item \url{http://www.formula1.com/results/driver/2014/}
-\item \url{http://en.wikipedia.org/wiki/List_of_Formula_One_World_Drivers%27_Champions#By_constructor}
+\item \url{https://en.wikipedia.org/wiki/List_of_Formula_One_World_Drivers%27_Champions#By_constructor}
 \item \url{http://en.wikipedia.org/wiki/List_of_Formula_One_circuits}
 \item \url{http://www.statsf1.com/en/saisons.aspx}
 \end{enumerate}
@@ -51,8 +52,22 @@ V 3. fazi projekta sem uvozila zemljevid sveta, pobarvala države iz katerih pri
 \includegraphics[width=1.5\textwidth]{../slike/Zmage_po_drzavah.pdf}
 }
 
+
+\pagebreak
 \section{Napredna analiza podatkov}
 
-Zaradi pomankanja podatkov in neustrezno izbrane teme, sem morala uvoziti še kar nekaj tabel (konstruktorske zmage zadnjih nekaj let). 
+Zaradi pomankanja podatkov in neustrezno izbrane teme, sem morala uvoziti še kar nekaj tabel (konstruktorske zmage zadnjih 9 let). Sprva sem mislila napovedovati zmago ekipe na Veliki nagradi Italije in Japonske, saj sta to dirki, ki sta bili prisotni na koledarju v vseh letih. Ker se je v letošnji sezoni dirka v Italiji že odvila, bi lahko preverila kako točna je bila napoved. Vendar pa sem si zaradi manjših težav premislila. Sem pa za ti dve dirki naredila animacijo zmag ekip od leta 2011 do 2014 (za Italijo sem dodala še letošnje točke).
+
+\begin{figure}[H] 
+\animategraphics[controls,width=1.2\linewidth]{0.5}{../slike/Italija}{0}{4}  
+\caption{Animacija, ki prikazuje zmage najpomembnejših ekip v Italiji od leta 2011 do leta 2014} 
+\end{figure} 
+
+
+\begin{figure}[H] 
+\animategraphics[controls,width=1.2\linewidth]{0.5}{../slike/Japonska}{0}{4}  
+\caption{Animacija, ki prikazuje zmage najpomembnejših ekip na Japonskem od leta 2011 do leta 2014} 
+\end{figure} 
+
 
 \end{document}

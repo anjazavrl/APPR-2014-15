@@ -176,3 +176,18 @@ uvoziK2014 <- function() {
 cat("Uvažam podatke o konstruktorskih zmagah leta 2014...\n")
 Konstruktorji2014 <- uvoziK2014()
 
+
+
+
+# Funkcija, ki uvozi podatke iz datoteke konstruktorji2015.csv
+uvoziK2015 <- function() {
+  return(read.table("podatki/konstruktorji2015.csv", sep = ";", as.is = TRUE,
+                    header = TRUE,
+                    fileEncoding = "Windows-1250"))
+  
+}
+
+
+# Zapišimo podatke v razpredelnico Konstruktorji2015
+cat("Uvažam podatke o konstruktorskih zmagah leta 2015...\n")
+Konstruktorji2015 <- uvoziK2015()

@@ -112,10 +112,12 @@ K2011 <- K2011[-c(3, 8, 11), ]
 K2011$Konstruktorji[agrep("Williams Cosworth",K2011$Konstruktorji)]<-"Williams"
 K2011$Konstruktorji[agrep("Toro Rosso Ferrari",K2011$Konstruktorji)]<-"Toro Rosso"
 
+
 K2012 <- Konstruktorji2012[order(Konstruktorji2012$Konstruktorji), ]
 K2012 <- K2012[-c(1, 4, 6), ]
 K2012$Konstruktorji[agrep("Williams Renault",K2012$Konstruktorji)]<-"Williams"
 K2012$Konstruktorji[agrep("Toro Rosso Ferrari",K2012$Konstruktorji)]<-"Toro Rosso"
+
 
 K2013 <- Konstruktorji2013[order(Konstruktorji2013$Konstruktorji), ]
 K2013 <- K2013[-c(1, 5), ]
@@ -128,63 +130,76 @@ K2014 <- K2014[-c(1, 5), ]
 K2014$Konstruktorji[agrep("Williams Mercedes",K2014$Konstruktorji)]<-"Williams"
 K2014$Konstruktorji[agrep("Toro Rosso Renault",K2014$Konstruktorji)]<-"Toro Rosso"
 
-Italija <- data.frame(I2011 = K2011$ITA, I2012 = K2012$ITA, I2013 = K2013$ITA, I2014 = K2014$ITA, )
+K2015 <- Konstruktorji2015[order(Konstruktorji2015$Konstruktorji), ]
+K2015 <- K2015[-c(4), ]
+K2015$Konstruktorji[agrep("Williams Mercedes",K2015$Konstruktorji)]<-"Williams"
+K2015$Konstruktorji[agrep("Toro Rosso Renault",K2015$Konstruktorji)]<-"Toro Rosso"
+
+
+Italija <- data.frame(I2011 = K2011$ITA, I2012 = K2012$ITA, I2013 = K2013$ITA, I2014 = K2014$ITA)
 row.names(Italija) <- K2011$Konstruktorji
+
 
 
 Japonska <- data.frame(J2011 = K2011$JPN, J2012 = K2012$JPN, J2013 = K2013$JPN, J2014 = K2014$JPN)
 row.names(Japonska) <- K2011$Konstruktorji
 
 
-pdf("slike/Italija.pdf", paper="a4")
+pdf("slike/Italija.pdf")
 
 m <- apply(Italija, 1, function(x) as.numeric(x[1]))
-barplot(m, beside=TRUE, main ='Število točk ekip leta 2011', sub
-        ='Ekipe', ylab = 'Število točk', col = c('seagreen1'),
-        las=2, cex.names=0.5)
+barplot(m, beside=TRUE, main ='Stevilo tock ekip leta 2011', sub
+        ='Ekipe', ylab = 'Stevilo tock', col = c('seagreen1'),
+        las=2, cex.names=0.6)
 
 m <- apply(Italija, 1, function(x) as.numeric(x[2]))
-barplot(m, beside=TRUE, main ='Število točk ekip leta 2012', sub
-        ='Ekipe', ylab = 'Število točk', col = c('salmon'),
-        las=2, cex.names=0.5)
+barplot(m, beside=TRUE, main ='Stevilo tock ekip leta 2012', sub
+        ='Ekipe', ylab = 'Stevilo tock', col = c('salmon'),
+        las=2, cex.names=0.6)
 
 m <- apply(Italija, 1, function(x) as.numeric(x[3]))
-barplot(m, beside=TRUE, main ='Število točk ekip leta 2013', sub
-        ='Ekipe', ylab = 'Število točk', col = c('royalblue1'),
-        las=2, cex.names=0.5)
+barplot(m, beside=TRUE, main ='Stevilo tock ekip leta 2013', sub
+        ='Ekipe', ylab = 'Stevilo tock', col = c('royalblue1'),
+        las=2, cex.names=0.6)
 
 
 m <- apply(Italija, 1, function(x) as.numeric(x[4]))
-barplot(m, beside=TRUE, main ='Število točk ekip leta 2014', sub
-        ='Ekipe', ylab = 'Število točk', col = c('turquoise'),
-        las=2, cex.names=0.5)
+barplot(m, beside=TRUE, main ='Stevilo tock ekip leta 2014', sub
+        ='Ekipe', ylab = 'Stevilo tock', col = c('turquoise'),
+        las=2, cex.names=0.6)
+
+
+m <- apply(K2015, 1, function(x) as.numeric(x[13]))
+barplot(m, beside=TRUE, main ='Stevilo tock ekip leta 2015', sub
+        ='Ekipe', ylab = 'Stevilo tock', col = c('slateblue1'),
+        las=2, names.arg=K2015$Konstruktorji, cex.names=0.6)
 
 dev.off()
 
 
 
-pdf("slike/Japonska.pdf", paper="a4")
+pdf("slike/Japonska.pdf")
 
 m <- apply(Japonska, 1, function(x) as.numeric(x[1]))
-barplot(m, beside=TRUE, main ='Število točk ekip leta 2011', sub
-        ='Ekipe', ylab = 'Število točk', col = c('seagreen1'),
-        las=2, cex.names=0.5)
+barplot(m, beside=TRUE, main ='Stevilo tock ekip leta 2011', sub
+        ='Ekipe', ylab = 'Stevilo tock', col = c('seagreen1'),
+        las=2, cex.names=0.6)
 
 m <- apply(Japonska, 1, function(x) as.numeric(x[2]))
-barplot(m, beside=TRUE, main ='Število točk ekip leta 2012', sub
-        ='Ekipe', ylab = 'Število točk', col = c('salmon'),
-        las=2, cex.names=0.5)
+barplot(m, beside=TRUE, main ='Stevilo tock ekip leta 2012', sub
+        ='Ekipe', ylab = 'Stevilo tock', col = c('salmon'),
+        las=2, cex.names=0.6)
 
 m <- apply(Japonska, 1, function(x) as.numeric(x[3]))
-barplot(m, beside=TRUE, main ='Število točk ekip leta 2013', sub
-        ='Ekipe', ylab = 'Število točk', col = c('royalblue1'),
-        las=2, cex.names=0.5)
+barplot(m, beside=TRUE, main ='Stevilo tock ekip leta 2013', sub
+        ='Ekipe', ylab = 'Stevilo tock', col = c('royalblue1'),
+        las=2, cex.names=0.6)
 
 
 m <- apply(Japonska, 1, function(x) as.numeric(x[4]))
-barplot(m, beside=TRUE, main ='Število točk ekip leta 2014', sub
-        ='Ekipe', ylab = 'Število točk', col = c('turquoise'),
-        las=2, cex.names=0.5)
+barplot(m, beside=TRUE, main ='Stevilo tock ekip leta 2014', sub
+        ='Ekipe', ylab = 'Stevilo tock', col = c('turquoise'),
+        las=2, cex.names=0.6)
 
 dev.off()
 
