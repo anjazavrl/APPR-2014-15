@@ -1,4 +1,5 @@
 library(XML)
+library(httr)
 
 # Vrne vektor nizov z odstranjenimi začetnimi in končnimi "prazninami" (whitespace)
 # iz vozlišč, ki ustrezajo podani poti.
@@ -9,14 +10,14 @@ stripByPath <- function(x, path) {
 
 uvoz.konstruktorske.zmage <- function() {
   url.konstruktorske.zmage <- "http://en.wikipedia.org/wiki/List_of_Formula_One_World_Drivers%27_Champions#By_constructor"
-  doc.konstruktorske.zmage <- htmlTreeParse(url.konstruktorske.zmage,encoding = "UTF-8", useInternalNodes=TRUE)
+  doc.konstruktorske.zmage <- htmlTreeParse(GET(url.konstruktorske.zmage),encoding = "UTF-8", useInternalNodes=TRUE)
   
   # Poiščemo vse tabele v dokumentu
   tabele <- getNodeSet(doc.konstruktorske.zmage, "//table")
   
   # Iz šeste tabele dobimo seznam vrstic (<tr>) neposredno pod
   # trenutnim vozliščem
-  vrstice <- getNodeSet(tabele[[6]], "./tr")
+  vrstice <- getNodeSet(tabele[[5]], "./tr")
   
   # Seznam vrstic pretvorimo v seznam (znakovnih) vektorjev
   # s porezanimi vsebinami celic (<td>) neposredno pod trenutnim vozliščem
